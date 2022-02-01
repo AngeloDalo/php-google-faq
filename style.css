@@ -61,7 +61,7 @@ html {
 
 /*main*/
 main {
-    padding: 8em 15%;
+    padding: 8em 15% 1em 15%;
 }
 
 .faq-request {
@@ -92,4 +92,33 @@ li {
 
 a {
     text-decoration: none;
+}
+
+/*footer*/
+.container-footer {
+    padding: 1em 0em;
+}
+
+.container-footer .row {
+    padding: 0em 15%;
+}
+
+.container-footer .row .col-8 a {
+    color: grey;
+    text-decoration: none;
+    font-size: 0.7em
+}
+
+.container-footer .row .col-8 span {
+    font-size: 0.7em;
+    color: grey;
+}
+
+.container-footer .row .col-4 i {
+    color: rgb(13, 138, 216);
+}
+
+.container-footer .row .col-4 select {
+    border: 2px solid black;
+    margin-left: 1em;
 }
