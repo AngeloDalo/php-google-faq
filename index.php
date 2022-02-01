@@ -92,7 +92,7 @@ $array_paragrafo = [];
             <div class="row">
                 <div class="col-8">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 d-flex align-items-center">
                             <img class="google-logo" src="img\google-logo-attuale-scritta-multicolore.png" alt="google-logo">
                             <a id="privacy" href="#">Privacy e termini</a>
                         </div>
