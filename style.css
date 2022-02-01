@@ -40,7 +40,8 @@ html {
 
 .link-row .col-12 a:active,
 .link-row .col-12 a:focus {
-    border-bottom: 2px solid blue;
+    border-bottom: 3px solid blue;
+    color: blue;
 }
 
 .fa-bars {

@@ -120,9 +120,11 @@ $array_paragrafo = [];
         <div class="div">
             <?php
             foreach ($faq as $key => $single_faq) {
+                //divido la risposta in più pagrafi andando a capo alla fine del paragrafo
                 foreach ($single_faq as $value) {
                     $array_paragrafo = (explode(".  ", $value["risposta"]));
                 }
+                //primo ciclo per stampare la domanda successivamente vengono stampati i paragrafi della rispettiva domanda
                 foreach ($single_faq as $value) {
                     echo '<h1 class="faq-request">' . $value["domanda"].'</h1>' ;
                     //echo '<p>' . $value["risposta"].'</p>' ;
