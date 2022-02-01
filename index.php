@@ -3,6 +3,8 @@
  * Consegna: Riscrivere questa pagina del sito google https://policies.google.com/faq.
  * Ci sono diverse domande con relative risposte. Gestire il “Database” e la visualizzazione di queste domande e risposte con PHP
  */
+
+//evitare nomi faqn, si può fare anche array in array
 $faq = [
     'faq1' => [
         [
@@ -122,17 +124,29 @@ $array_paragrafo = [];
             foreach ($faq as $key => $single_faq) {
                 //divido la risposta in più pagrafi andando a capo alla fine del paragrafo
                 foreach ($single_faq as $value) {
-                    $array_paragrafo = (explode(".  ", $value["risposta"]));
-                }
-                //primo ciclo per stampare la domanda successivamente vengono stampati i paragrafi della rispettiva domanda
-                foreach ($single_faq as $value) {
                     echo '<h1 class="faq-request">' . $value["domanda"].'</h1>' ;
-                    //echo '<p>' . $value["risposta"].'</p>' ;
+                    $array_paragrafo = (explode(".  ", $value["risposta"]));
+                    //metterlo nello stesso ciclo del riempimento dei paragrafi funziona comunque
                     for ($i=0; $i<count($array_paragrafo); $i++) {
-                        echo '<p class="paragraph">' . $array_paragrafo[$i] ."</p></br>";
+                        //var_dump($array_paragrafo[$i]);
+                            echo '<p class="paragraph">' . $array_paragrafo[$i] ."</p></br>";
                     }
                 }
+                //primo ciclo per stampare la domanda successivamente vengono stampati i paragrafi della rispettiva domanda
+                //foreach ($single_faq as $value) {
+                    //echo '<h1 class="faq-request">' . $value["domanda"].'</h1>' ;
+                    //ciclo for in questa posizione stampa paragrafo correttamente
+                    //prima riempie con foreach successivamente stampa i paragrafi della corrispettiva domanda
+                    //for ($i=0; $i<count($array_paragrafo); $i++) {
+                        //var_dump($array_paragrafo[$i]);
+                            //echo '<p class="paragraph">' . $array_paragrafo[$i] ."</p></br>";
+                    //}
+                    //echo '<p>' . $value["risposta"].'</p>' ;
+                    //var_dump($single_faq);
+                    //var_dump($value);
+                //}
             }
+            //Se metto ciclo for con array paragrafo viene stampato solamente ultimo paragrafo
             ?>
         </div>
     </main>
