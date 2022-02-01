@@ -88,7 +88,7 @@ $array_paragrafo = [];
 </head>
 <body>
     <header>
-        <div class="container-fluid">
+        <div class="container-fluid fixed-top">
             <div class="row">
                 <div class="col-8">
                     <div class="row">

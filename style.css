@@ -11,8 +11,10 @@ html {
 }
 /*header*/
 .container-fluid {
+    z-index: 5;
     padding: 1em 1em 0em 1em;
     border-bottom: 1px solid grey;
+    background-color: white;
 }
 
 .google-logo {
@@ -59,7 +61,7 @@ html {
 
 /*main*/
 main {
-    padding: 2em 15%;
+    padding: 8em 15%;
 }
 
 .faq-request {
